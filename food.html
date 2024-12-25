@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@451&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Stylish&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Merienda:wght@300..900&family=Playwrite+FR+Moderne+Guides&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Merienda:wght@300..900&family=Playwrite+FR+Moderne+Guides&family=Rancho&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kanit:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Merienda:wght@300..900&family=Playwrite+FR+Moderne+Guides&family=Rancho&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Crimson+Text:ital,wght@1,600&family=Kanit:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Merienda:wght@300..900&family=Playwrite+FR+Moderne+Guides&family=Rancho&family=Roboto+Serif:opsz,wght@8..144,562&display=swap" rel="stylesheet">
+<title>FOOD WEBSITE</title>
+    <style>
+      body{
+       background-image: url(food/food.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: pink;
+      }
+      .header{
+        display: flex;
+        text-align: center;
+        background-color: #FAEBD7;
+        padding-left: 50px;
+        border-radius: 17px;
+        margin-top: 25px;
+      }
+      .header div{
+        font-family: EB Garamond;
+        font-size: 30px;
+        margin-top: 25px;
+        margin-left: 10px;
+      }
+      .h-img{
+        width: 8%;
+        height: 4%;
+        margin-top: 10.5px;
+      }
+      .lists{
+        display: flex;
+        list-style-type: none;
+        gap: 40px;
+        margin-left: 110px;
+        margin-top: 25px;
+        font-size: 25px;
+        font-family: kanit;
+        
+      }
+      .lists a{
+        text-decoration: none;
+        color: black;
+      }
+      .btn1 , .btn2{
+        width: 290px;
+        height: 30px;
+        margin-top: 29px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        color: white;
+      }
+      .btn1 a , .btn2 a{
+        text-decoration: none;
+        color: white;
+      }
+      .btn1{
+        margin-left: 120px;
+        background-color: #FF7F50;
+      }
+      .btn2{
+        margin-left: 15px;
+        margin-right: 40px;
+        background-color:#32CD32 ;
+      }
+      .Search{
+        margin-top: 60px;
+        margin-left: 330px;
+        height: 40px;
+        width: 650px;
+        border: none;
+        border-radius: 20px;
+        padding-left: 20px;
+        font-size: 16px;
+        font-style: oblique;
+      }
+      .food-header{
+        margin-top: 80px;
+        background-color: white;
+        font-family: Merienda;
+        font-size: 32px;
+        text-align: center;
+      }
+      .meals{
+        margin-left: 50px;
+        display: flex;
+      }
+      .meals-header{
+        text-align: center;
+        background-color: #FFDA44;
+        font-family: Rancho;
+        font-size: 25px;
+        margin-top: 20px;
+        color: rgb(70, 0, 70);
+      }
+      .food-div{
+        background-color: whitesmoke;
+        width: 200px;
+        margin: 15px;
+        text-align: center;
+      }
+      .foods-p{
+        width: 100%;
+      }
+      .foods-p1{
+        width: 100%;
+        height: 153px;
+      }
+      .foods-p2{
+        width: 100%;
+        height: 153px;
+      }
+      .foods-p3{
+        width: 100%;
+        height: 153px;
+      }
+      .foods-p4{
+        width: 100%;
+        height: 153px;
+      }
+      .foods-pm1{
+        width: 100%;
+        height: 153px;
+      }
+      .food-name{
+        text-align: center;
+        font-family: Bree Serif;
+      }
+      .sub-name{
+        text-align: center;
+        font-size: 13px;
+        font-style: oblique;
+      }
+      .price{
+        text-align: center;
+        margin-top: 23px;
+        font-family: Roboto Serif;
+        font-size: 18px;
+      }
+      .food-btn{
+        margin-top: 20px;
+        width: 110px;
+        height: 40px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 50px;
+        background-color: orange;
+        color: white;
+        font-family: kanit;
+        font-size: 17px;
+      }
+      @media (min-width:720px) /*My Phone*/ {
+        .header{
+        display: flex;
+        text-align: center;
+        background-color: #FAEBD7;
+        padding-left: 30px;
+        border-radius: 17px;
+        margin-top: 25px;
+        width: 1000px;
+      }
+      .h-img{
+        width: 9%;
+        height: 4%;
+        margin-top: 10.5px;
+        margin-top: 15px;
+      }
+      .lists{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        margin-left: 40px;
+        margin-top: 25px;
+        font-size: 25px;
+        font-family: kanit;
+      }
+      .btn1 , .btn2{
+        width: 180px;
+        height: 30px;
+        margin-top: 29px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        color: white;
+      }
+      .btn1 a , .btn2 a{
+        text-decoration: none;
+        color: white;
+      }
+      .btn1{
+        margin-left: 40px;
+        background-color: #FF7F50;
+        font-weight: 600;
+      }
+      .btn2{
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color:#32CD32;
+        font-weight: 600;
+      }
+      /*head section done*/
+      .Search{
+        margin-top: 60px;
+        margin-left: 210px;
+        height: 70px;
+        width: 630px;
+        border: none;
+        border-radius: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        font-style: oblique;
+      }
+      .food-header{
+        margin-top: 70px;
+        background-color: white;
+        font-family: Merienda;
+        font-size: 32px;
+        text-align: center;
+        width: 1016px;
+      }
+      .meals-header{
+        text-align: center;
+        background-color: #FFDA44;
+        font-family: Rancho;
+        font-size:40px;
+        margin-top: 20px;
+        color: rgb(70, 0, 70);
+        width: 1016px;
+        height: 50px;
+      }
+      .meals{
+        margin-left: 5px;
+        display: flex;
+        width: 1016px;
+      }
+    }
+
+      @media (min-width:390px) /*Iphoone 12 pro*/ {
+        .header{
+        display: flex;
+        text-align: center;
+        background-color: #FAEBD7;
+        padding-left: 30px;
+        border-radius: 17px;
+        margin-top: 25px;
+        width: 1000px;
+      }
+      .h-img{
+        width: 9%;
+        height: 4%;
+        margin-top: 10.5px;
+        margin-top: 15px;
+      }
+      .lists{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        margin-left: 40px;
+        margin-top: 25px;
+        font-size: 25px;
+        font-family: kanit;
+      }
+      .btn1 , .btn2{
+        width: 180px;
+        height: 30px;
+        margin-top: 29px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        color: white;
+      }
+      .btn1 a , .btn2 a{
+        text-decoration: none;
+        color: white;
+      }
+      .btn1{
+        margin-left: 40px;
+        background-color: #FF7F50;
+        font-weight: 600;
+      }
+      .btn2{
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color:#32CD32;
+        font-weight: 600;
+      }
+      /*head section done*/
+      .Search{
+        margin-top: 60px;
+        margin-left: 210px;
+        height: 70px;
+        width: 630px;
+        border: none;
+        border-radius: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        font-style: oblique;
+      }
+      .food-header{
+        margin-top: 70px;
+        background-color: white;
+        font-family: Merienda;
+        font-size: 32px;
+        text-align: center;
+        width: 1016px;
+      }
+      .meals-header{
+        text-align: center;
+        background-color: #FFDA44;
+        font-family: Rancho;
+        font-size:40px;
+        margin-top: 20px;
+        color: rgb(70, 0, 70);
+        width: 1016px;
+        height: 50px;
+      }
+      .meals{
+        margin-left: 5px;
+        display: flex;
+        width: 1016px;
+      }
+    }
+
+    @media (min-width:414px) /*Iphoone Xr*/ {
+        .header{
+        display: flex;
+        text-align: center;
+        background-color: #FAEBD7;
+        padding-left: 30px;
+        border-radius: 17px;
+        margin-top: 25px;
+        width: 960px;
+      }
+      .h-img{
+        width: 9%;
+        height: 4%;
+        margin-top: 10.5px;
+        margin-top: 15px;
+      }
+      .lists{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        margin-left: 40px;
+        margin-top: 25px;
+        font-size: 25px;
+        font-family: kanit;
+      }
+      .btn1 , .btn2{
+        width: 180px;
+        height: 30px;
+        margin-top: 29px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        color: white;
+      }
+      .btn1 a , .btn2 a{
+        text-decoration: none;
+        color: white;
+      }
+      .btn1{
+        margin-left: 40px;
+        background-color: #FF7F50;
+        font-weight: 600;
+      }
+      .btn2{
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color:#32CD32;
+        font-weight: 600;
+      }
+      /*head section done*/
+      .Search{
+        margin-top: 60px;
+        margin-left: 190px;
+        height: 70px;
+        width: 600px;
+        border: none;
+        border-radius: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        font-style: oblique;
+      }
+      .food-header{
+        margin-top: 70px;
+        background-color: white;
+        font-family: Merienda;
+        font-size: 32px;
+        text-align: center;
+        width: 980px;
+      }
+      .meals-header{
+        text-align: center;
+        background-color: #FFDA44;
+        font-family: Rancho;
+        font-size: 40px;
+        margin-top: 20px;
+        color: rgb(70, 0, 70);
+        width: 980px;
+        height: 50px;
+      }
+      .meals{
+        margin-left: 5px;
+        display: flex;
+        width: 980px;
+      }
+    }
+
+    @media (min-width:430px) /*Iphoone 14 pro max*/ {
+        .header{
+        display: flex;
+        text-align: center;
+        background-color: #FAEBD7;
+        padding-left: 30px;
+        border-radius: 17px;
+        margin-top: 25px;
+        width: 960px;
+      }
+      .h-img{
+        width: 9%;
+        height: 4%;
+        margin-top: 10.5px;
+        margin-top: 15px;
+      }
+      .lists{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        margin-left: 40px;
+        margin-top: 25px;
+        font-size: 25px;
+        font-family: kanit;
+      }
+      .btn1 , .btn2{
+        width: 180px;
+        height: 30px;
+        margin-top: 29px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        color: white;
+      }
+      .btn1 a , .btn2 a{
+        text-decoration: none;
+        color: white;
+      }
+      .btn1{
+        margin-left: 40px;
+        background-color: #FF7F50;
+        font-weight: 600;
+      }
+      .btn2{
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color:#32CD32;
+        font-weight: 600;
+      }
+      /*head section done*/
+      .Search{
+        margin-top: 60px;
+        margin-left: 190px;
+        height: 70px;
+        width: 600px;
+        border: none;
+        border-radius: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        font-style: oblique;
+      }
+      .food-header{
+        margin-top: 70px;
+        background-color: white;
+        font-family: Merienda;
+        font-size: 32px;
+        text-align: center;
+        width: 980px;
+      }
+      .meals-header{
+        text-align: center;
+        background-color: #FFDA44;
+        font-family: Rancho;
+        font-size: 40px;
+        margin-top: 20px;
+        color: rgb(70, 0, 70);
+        width: 980px;
+        height: 50px;
+      }
+      .meals{
+        margin-left: 5px;
+        display: flex;
+        width: 980px;
+      }
+    }
+
+    @media (min-width:1978px) /*Window*/ {
+        .header{
+        display: flex;
+        text-align: center;
+        background-color: #FAEBD7;
+        padding-left: 30px;
+        border-radius: 17px;
+        margin-top: 25px;
+        width: 1930px;
+      }
+      .header div{
+        font-family: EB Garamond;
+        font-size: 70px;
+        margin-top: 25px;
+        margin-left: 10px;
+      }
+      .h-img{
+        width: 9%;
+        height: 4%;
+        margin-top: 10.5px;
+        margin-top: 15px;
+      }
+      .lists{
+        display: flex;
+        list-style-type: none;
+        gap: 40px;
+        margin-left: 120px;
+        margin-top: 40px;
+        font-size: 50px;
+        font-family: kanit;
+      }
+      .btn1 , .btn2{
+        width: 180px;
+        height: 55px;
+        margin-top: 55px;
+        border: none;
+        border-radius: 5px;
+        font-size: 25px;
+        color: white;
+        font-weight: 700;
+      }
+      .btn1 a , .btn2 a{
+        text-decoration: none;
+        color: white;
+      }
+      .btn1{
+        margin-left: 40px;
+        background-color: #FF7F50;
+        font-weight: 600;
+      }
+      .btn2{
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color:#32CD32;
+        font-weight: 600;
+      }
+      /*head section done*/
+      .Search{
+        margin-top: 60px;
+        margin-left: 400px;
+        height: 70px;
+        width: 1200px;
+        border: none;
+        border-radius: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        font-style: oblique;
+      }
+      .food-header{
+        margin-top: 70px;
+        background-color: white;
+        font-family: Merienda;
+        font-size: 32px;
+        text-align: center;
+        width: 1930px;
+      }
+      .meals-header{
+        text-align: center;
+        background-color: #FFDA44;
+        font-family: Rancho;
+        font-size: 40px;
+        margin-top: 20px;
+        color: rgb(70, 0, 70);
+        width: 1930px;
+        height: 50px;
+      }
+      .meals{
+        margin-left: 50px;
+        display: flex;
+        width: 100%;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img class="h-img" src="Logo/cut 1.png" alt="logo">
+      <div>Dishcovery</div>
+
+    <ul class="lists">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Trending</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+
+    <button class="btn1"><a href="#">Sign Up</a></button>
+    <button  class="btn2"><a href="#">Log In</a></button>
+   </header>
+
+  <input class="Search" type="text" placeholder="Search your favorite dishes">
+    <!--<button type="submit" class="login-btn">Enter</button>--> 
+
+<header class="food-header">
+  &#8226; Our Menu  &#8226;
+</header>
+
+<header class="meals-header" >Cuisine-Based Meals</header>
+
+<div class="meals">
+  
+  <div class="food-div">
+    <div>
+      <img class="foods-p" src="food/Italian/margherita pizza.jpg" alt="margherita">
+      <div class="food-name"> &#10061; PIZZA MARGHERITA</div>
+      <div class="sub-name">&#8226;Italian meal&#8226;</div>
+      <div class="price">&#8358; 6000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-p1" src="food/Italian/Lasagna.jpg" alt="margherita">
+      <div class="food-name"> &#10061; LASAGNA</div>
+      <div class="sub-name">&#8226;Italian meal&#8226;</div>
+      <div class="price">&#8358; 9000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-p3" src="food/Italian/spaghetti Carbonara.jfif" alt="margherita">
+      <div class="food-name"> &#10061; SPAGHETTI CARBONARA</div>
+      <div class="sub-name">&#8226;Italian meal&#8226;</div>
+      <div class="price">&#8358; 4000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-p2" src="food/Italian/Risotto alla Milanese.jpg" alt="margherita">
+      <div class="food-name"> &#10061; RISOTTTO MILANESE</div>
+      <div class="sub-name">&#8226;Italian meal&#8226;</div>
+      <div class="price">&#8358; 5000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-p4" src="food/Italian/Tiramisu.jpg" alt="margherita">
+      <div class="food-name"> &#10061; TIRAMISU</div>
+      <div class="sub-name">&#8226;Italian meal&#8226;</div>
+      <div class="price">&#8358; 5000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+  
+</div>
+
+<div class="meals"> <!--second step-->
+  
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/Mexican/taco real.jpg" alt="margherita">
+      <div class="food-name"> &#10061; TACOS</div>
+      <div class="sub-name">&#8226;Mexican meal&#8226;</div>
+      <div class="price">&#8358; 9000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/Mexican/enchiladas.jfif" alt="margherita">
+      <div class="food-name"> &#10061; ENCHILADAS</div>
+      <div class="sub-name">&#8226;Mexican meal&#8226;</div>
+      <div class="price">&#8358; 9000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/Mexican/Chile-Rellenos.jpg" alt="margherita">
+      <div class="food-name"> &#10061; CHILE RELLENOS</div>
+      <div class="sub-name">&#8226;Mexican meal&#8226;</div>
+      <div class="price">&#8358; 6000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/Mexican/GUACAMOLE.jpg" alt="margherita">
+      <div class="food-name"> &#10061; GUACAMOLE+TORTILLA</div>
+      <div class="sub-name">&#8226;Mexican meal&#8226;</div>
+      <div class="price">&#8358; 10000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/Mexican/Pozole-WEBSITE--800x530.jpg" alt="margherita">
+      <div class="food-name"> &#10061; POZOLE</div>
+      <div class="sub-name">&#8226;Mexican meal&#8226;</div>
+      <div class="price">&#8358; 10000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+  
+</div>
+
+
+<div class="meals"> <!--third step-->
+  
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/CHINESE AND INDIAN/Kung-Pao-Chicken-Reshoot-11_PS.jpg" alt="margherita">
+      <div class="food-name"> &#10061; KUNG PAO CHICKEN</div>
+      <div class="sub-name">&#8226;Chinese meal&#8226;</div>
+      <div class="price">&#8358; 8000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/CHINESE AND INDIAN/sweet.jpg" alt="margherita">
+      <div class="food-name"> &#10061; SWEET AND SOUR PORK</div>
+      <div class="sub-name">&#8226;Chinese meal&#8226;</div>
+      <div class="price">&#8358; 9000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/CHINESE AND INDIAN/mapo-tofu_.jfif" alt="margherita">
+      <div class="food-name"> &#10061;  MA PO TOFU</div>
+      <div class="sub-name">&#8226;Chinese meal&#8226;</div>
+      <div class="price">&#8358; 6000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/CHINESE AND INDIAN/chicken-biryani-recipe.jpg" alt="margherita">
+      <div class="food-name"> &#10061;  Biryani</div>
+      <div class="sub-name">&#8226;Indian meal&#8226;</div>
+      <div class="price">&#8358; 7000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/CHINESE AND INDIAN/masala-dosa-recipe.jpg" alt="margherita">
+      <div class="food-name"> &#10061; MASALA DOSA</div>
+      <div class="sub-name">&#8226;Indian meal&#8226;</div>
+      <div class="price">&#8358; 10000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+  
+</div>
+
+<header class="meals-header" >African Meals</header>
+
+<div class="meals"> <!--fourth step-->
+  
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/jolo.jpg" alt="margherita">
+      <div class="food-name"> &#10061; JOLLOF RICE</div>
+      <div class="sub-name">&#8226;Nigerian meal&#8226;</div>
+      <div class="price">&#8358; 6000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/bunny-chow-3-of-3.jpg" alt="margherita">
+      <div class="food-name"> &#10061; BUNNY CHOW</div>
+      <div class="sub-name">&#8226;South African meal&#8226;</div>
+      <div class="price">&#8358; 10000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/Easy-Couscous-Salad-Recipe-1-1200.jpg" alt="margherita">
+      <div class="food-name"> &#10061;  COUSCOUS</div>
+      <div class="sub-name">&#8226;North African meal&#8226;</div>
+      <div class="price">&#8358; 6000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/FUFU.webp" alt="margherita">
+      <div class="food-name"> &#10061;  FUFU AND SOUP</div>
+      <div class="sub-name">&#8226;West African meal&#8226;</div>
+      <div class="price">&#8358; 4000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/RFO-1400x919-Tagine-724d7e31-fe78-4182-846f-04165d6df9d0-0-1400x919.jpg" alt="margherita">
+      <div class="food-name"> &#10061; CHICKEN TAGINE</div>
+      <div class="sub-name">&#8226;Morrocoan meal&#8226;</div>
+      <div class="price">&#8358; 7000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+  
+</div>
+
+
+<div class="meals"> <!--fifth step-->
+  
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/NyamaChoma-FEATURE.jpg" alt="margherita">
+      <div class="food-name"> &#10061; NYAMA CHOMA</div>
+      <div class="sub-name">&#8226;Kenyan/Tanzanian meal&#8226;</div>
+      <div class="price">&#8358; 7000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/egusi-soup-with-chicken-recipe.jpg" alt="margherita">
+      <div class="food-name"> &#10061; EGUSI SOUP</div>
+      <div class="sub-name">&#8226;Nigerian meal&#8226;</div>
+      <div class="price">&#8358; 5000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/piri.jpg" alt="margherita">
+      <div class="food-name"> &#10061;  PIRI PIRI CHICKEN</div>
+      <div class="sub-name">&#8226;Mozambican meal&#8226;</div>
+      <div class="price">&#8358; 7000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/Waakye-13.jpg" alt="margherita">
+      <div class="food-name"> &#10061;  WAAKYE</div>
+      <div class="sub-name">&#8226;Ghanian meal&#8226;</div>
+      <div class="price">&#8358; 3000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/suyaaa.jpeg" alt="margherita">
+      <div class="food-name"> &#10061; SUYA</div>
+      <div class="sub-name">&#8226;Nigerian meal&#8226;</div>
+      <div class="price">&#8358; 8000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="meals"> <!--sixth step-->
+  
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/Thieboudienne.jpg" alt="margherita">
+      <div class="food-name"> &#10061; THIEBOUDIENNE</div>
+      <div class="sub-name">&#8226;Senegalese meal&#8226;</div>
+      <div class="price">&#8358; 10000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/USA2023090804_2560w.jpg" alt="margherita">
+      <div class="food-name"> &#10061;MATOKE</div>
+      <div class="sub-name">&#8226;Gambian meal&#8226;</div>
+      <div class="price">&#8358; 4000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/bobotie.jpg" alt="margherita">
+      <div class="food-name"> &#10061;  BOBOTIE</div>
+      <div class="sub-name">&#8226;South African meal&#8226;</div>
+      <div class="price">&#8358; 6000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/pound.webp" alt="margherita">
+      <div class="food-name"> &#10061; Pounded Yam and Egusi</div>
+      <div class="sub-name">&#8226; Nigerian meal&#8226;</div>
+      <div class="price">&#8358; 6000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+
+  <div class="food-div">
+    <div>
+      <img class="foods-pm1" src="food/african/moinmoin.jpg" alt="margherita">
+      <div class="food-name"> &#10061; MOI MOI</div>
+      <div class="sub-name">&#8226;Nigerian meal&#8226;</div>
+      <div class="price">&#8358; 8000.00</div>
+      <a href="#"><button class="food-btn">Order Now</button></a>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
